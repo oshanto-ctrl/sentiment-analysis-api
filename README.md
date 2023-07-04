@@ -104,6 +104,7 @@ follow (step 2), and (step 6).
 ## Output
 
 | Sample Text Input | Sample Sentiment Output |
+| ----------------  | ----------------------- |
 | Thank you for the opportunity. | Positive |
 | I disliked the theme. | Positive |
 | I liked the movie but the seats were uncomfortable. | Negative |
