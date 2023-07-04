@@ -14,6 +14,7 @@ Implemented a web server using Python web framework Flask. Created a single endp
 analysis performed by using a pre-trained machine learning model form Hugging Face
 Transformers Library.
 Then the sentiment analysis returns a JSON response a results with structure
+
 {
 ‘sentiment’: “Positive/Negative/Neutral”
 }
