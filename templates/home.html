@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sentiment Analysis</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{{ url_for('static', filename='css/styles.css') }}'>
+</head>
+
+<body>
+
+    <!-- Text Input -->
+    <div class="input_div">
+
+        <!-- Error Message -->
+        {% if error_msg %}
+            <p> {{ error_msg }}</p>
+        {% endif %}
+
+       <h1>Sentiment Analysis</h1>
+        <form action="/analyze" method="POST">
+            <label for="text">Input: </label>
+            <input type="text" name="text" placeholder="What's on your mind, User?" autocomplete="off" required>
+            <br><br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+    
+    <!-- Result Output -->
+    <br><br>
+        <div class="result_div">
+            <h2>Output</h2>
+            <b>Analaysed Result: </b>
+            {% if sentiment %} 
+                <p> {{ sentiment }} </p>
+            <div class="sentiment_jsonview">
+                <br>
+                <p>Input Text: </p> <b>{'text': '{{ json_text['text'] }}' }</b>
+                <p>Sentiment in JSON</p>
+                <b> <p>{ 'sentiment': ' {{ sentiment_json['sentiment'] }} ' }</p> </b>
+            </div>
+            {% endif %}
+        </div>
+
+    </body>
+
+</html>
+
+

@@ -1,0 +1,59 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Input */
+.input_div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.input_div form input {
+    margin-right: 10px;
+}
+
+/* Submit Button (Analyze) */
+button {
+    
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: green;
+}
+
+
+
+/* Result */
+.result_div {
+    border: 2px solid black;
+}
+
+.result_div h2{
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.result_div p {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Result in JSON Form */
+.sentiment_jsonview {
+    border: 2px solid black;
+}
+
+.sentiment_jsonview b {
+    font-size: 16px;
+}
+
+
