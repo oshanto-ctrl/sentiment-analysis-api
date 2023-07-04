@@ -5,6 +5,8 @@
 * [Technologies](#technologies)
 * [Project Folder Structure](#project-folder-structure)
 * [Installation](#installation)
+* [Output](#output)
+* [Evaluation](#evaluation)
 
 ## Introduction
 Building a backend service that exposes a RESTful API endpoint for sentiment analysis. 
@@ -99,7 +101,30 @@ After all that. If you want to operate that program again
 using your comand prompt
 follow (step 2), and (step 6). 
 
+## Output
+
+| Sample Text Input | Sample Sentiment Output |
+| Thank you for the opportunity. | Positive |
+| I disliked the theme. | Positive |
+| I liked the movie but the seats were uncomfortable. | Negative |
+| I like playing football and cricket. | Positive|
+| There is a road by our house. | Positive |
+| I love drinking cold water in the hot summer. | Positive|
+| I enjoyed the food but rude behavior of the staff and disgusting surroundings I did not like. | Negative |
+| I have a good laptop. | Positive |
+| The sky is blue today.| Positive |
+
+## Evaluation
+
+To evaluate a program it is important to consider both its accuracy and limitations.
+Sentiment analysis program using Huggin Face Transformers library is able to correctly identify positive and negative sentiment sentiment; this struggle with neutral statements may indicate that it is not effective at distinguishing between ambiguous or mixed emotion.
+
+To Improve the performance of sentiment analysis program:
+
+1) More sophisticated ML algorithms can be used. While the Hugging Face Transformers library is a powerful resource for NLP, it may be good to explore other ML techniques to improve accuracy like CNNs or LSTM models.
+
+2) Fine tuning sentiment analysis program model by modifying hyperparameters or tweaking its architecture. Adjusting number of layers, changing activation function or different learning rates to improve its ability to identify neutral sentiment.
+
 
 Thank you. :)
-
 
