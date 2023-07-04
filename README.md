@@ -99,7 +99,6 @@ using your comand prompt
 follow (step 2), and (step 6). 
 
 
-Thank you.
-
+Thank you. :)
 
 
