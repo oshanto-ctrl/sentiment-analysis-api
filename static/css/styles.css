@@ -1,59 +1,163 @@
-body {
-    text-align: center;
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
-/* Input */
+/* Container Styling */
 .input_div {
-    border: 1px solid black;
-    padding: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+    text-align: center;
 }
 
+/* Header */
+.input_div h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Layout */
+.input_div form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* Input Field */
 .input_div form input {
-    margin-right: 10px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
 
-/* Submit Button (Analyze) */
+.input_div form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Label */
+.input_div label {
+    text-align: left;
+    font-weight: 500;
+    color: #444;
+}
+
+/* Submit Button */
 button {
-    
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 6px;
     cursor: pointer;
-
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover{
-    background-color: green;
+button:hover {
+    background-color: #28a745;
+    transform: scale(1.02);
+}
+
+/* Error Message */
+.error_msg {
+    color: #dc3545;
+    background-color: #ffe2e2;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 
 
-/* Result */
+/* Result Container */
 .result_div {
-    border: 2px solid black;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.result_div h2{
-    font-size: 20px;
-    font-family: 'Times New Roman', Times, serif;
+.result_div h2 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 20px;
 }
 
-.result_div p {
-    font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
+/* Sentiment Output */
+.sentiment_result {
+    margin-bottom: 20px;
 }
 
-/* Result in JSON Form */
+/* Sentiment output tag representation */
+.sentiment_tag {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sentiment_tag.positive {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.sentiment_tag.negative {
+    background-color: #f8d7da;
+    color: #cd1427;
+}
+
+.sentiment_tag.neutral {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* JSON View Styling */
 .sentiment_jsonview {
-    border: 2px solid black;
+    text-align: left;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: #343a40;
+    line-height: 1.5;
 }
 
-.sentiment_jsonview b {
-    font-size: 16px;
+.sentiment_jsonview pre {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
 }
 
+/* Responsive */
+@media (max-width: 600px) {
+    .result_div {
+        padding: 20px 15px;
+    }
 
+    .sentiment_tag {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
